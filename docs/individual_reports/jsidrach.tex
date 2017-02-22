@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Physics 242 Final Assignment\\Individual Report}
+\author{J. Sidrach}
+\date{June 10, 2016}
+
+\begin{document}
+
+\maketitle
+
+In general, I was in charge of the implementation of the simulation.
+At the beginnig I implemented the model of the simple random walks (without the Metropolis algorithm).
+Unfortunately, the results were not really convincing so we ditched it in favor of the Metropolis algorithm.
+Xiaojian did the toy model of MCMC in Python, and I fixed some small mistakes and made sure it was working as intended.
+Once this toy model was correct, I translated the code into CUDA, parallelizing the creation of different paths (Markov Chains), and ensuring its correctness too.
+
+I also set up the whole structure of the project: folders, scripts, readme, LaTeX templates for the final report and the individual ones, collecting and classifying the reference papers we needed, and obtaining the historical stock data from Yahoo Finance.
+Thanks to the scripts I coded we have been able to automatize all the repetitive tasks that we had every once in a while: compiling and exporting the reports to PDF, exporting the IPython notebooks to HTML format (so it is not required to install IPython in order to see the code and the results), simulating the data in CUDA, generating the graphs from the data, and so on.
+This process is streamlined so that we can tweak our simulations and re-generate everything without much hassle, and my teammates could focus on the theory part without having to worry much about the actual implementation - which was my area of expertise.
+Additionally, I enforced the use of a version control system (git) so we could see our progress and prevent losing data accidentally.
+
+As for the challenges we faced, I think the project was hard to understand completely (the underlying theory)... maybe too ambitious for the time we had.
+While the actual simulations did not take as much time as other projects, the theory took way longer than the rest of the assignments and projects.
+Additionally, since we had no way to compare to other teams it was hard for us to know whether we had a bug in a code when something seemed strange or it was the expected result.
+It was also difficult to find literature which included simulations or source code for what we were trying to achieve, making the progress slow and not well founded.
+I personally struggled for some weeks with the application of the Metropolis algorithm, even after I took Stochastic Processes (PHYS 243) this past fall quarter.
+
+The team environment was fine, but I wish we had started trying to understand the theory way earlier and did not underestimated the time it would take to do so.
+Aside from the usual issues communicating (since no one of us is a native english speaker), I do not think anyone contributed less or tried to get away without working hard - so I'm satisfied on that front.
+
+\end{document}
